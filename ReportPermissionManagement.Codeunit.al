@@ -8,7 +8,7 @@ codeunit 50302 "Report Permission Management"
     [EventSubscriber(ObjectType::Codeunit, Codeunit::ReportManagement, OnAfterGetPrinterName, '', false, false)]
     local procedure OnAfterGetPrinterName_ReportManagement(ReportID: Integer; var PrinterName: Text[250]; PrinterSelection: Record "Printer Selection")
     var
-        WinExcludeReportPermission: Record "WIN Exclude Report Permission";
+        WinExcludeReportPermission: Record "Exclude Report Permission WIN";
     begin
         //WIN316_030823++
         If WinExcludeReportPermission.get(UserId, ReportID) then
